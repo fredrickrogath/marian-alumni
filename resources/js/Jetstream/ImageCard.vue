@@ -1,10 +1,10 @@
 <template>
 <!-- component -->
-<div class="bg-gray-200 h-screen flex items-center justify-center mb-10">
+<div class="bg-gray-200 flex items-center justify-center sm:mb-4 mb-2">
 
   <card class="border-gray-300 w-96 border">
     
-    <header class="grid grid-cols-6 items-center p-3 border-b border-b-gray-300">
+    <header class="grid grid-cols-6 items-center p-3   border-b border-b-gray-300">
       
       <div class="">
         <img src="https://picsum.photos/50/50" class="rounded-full w-10 h-10" />

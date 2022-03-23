@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="assets/css/theme.bundle.css" />
+    {{-- <link rel="stylesheet" href="assets/css/theme.bundle.css" /> --}}
 
     <!-- Scripts -->
     @routes

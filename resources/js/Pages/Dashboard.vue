@@ -20,7 +20,8 @@
             <image-card></image-card>
             <image-card></image-card>
             <image-card></image-card>
-          
+            <image-card></image-card>
+            <image-card></image-card>
           </div>
         </div>
       </div>
@@ -32,7 +33,7 @@
 import { defineComponent } from "vue";
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Welcome from "@/Jetstream/Welcome.vue";
-import ImageCard from "@/Jetstream/ImageCard.vue";
+import ImageCard from "@/Jetstream/MyComponents/ImageCard.vue";
 
 export default defineComponent({
   components: {

@@ -39,3 +39,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/settings', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
     return Inertia::render('Admin');
 })->name('admin');
+

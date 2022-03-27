@@ -114,10 +114,10 @@
       data(){
         return {
           optionsAreVisible: false,
-          showComments: true,
+          showComments: false,
         }
       },
-        props: [],
+        props: ['user-name'],
 
         emits: [],
 

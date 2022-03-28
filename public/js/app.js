@@ -20852,7 +20852,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   data: function data() {
     return {
-      users: []
+      users: [],
+      url: 'https://marian-alumni.herokuapp.com'
     };
   },
   beforeMount: function beforeMount() {
@@ -20873,7 +20874,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         } // body: JSON.stringify({ title: 'Vue POST Request Example' })
 
       };
-      fetch("http://127.0.0.1:8000/api/posts", requestOptions).then( /*#__PURE__*/function () {
+      fetch(this.url + "/api/posts", requestOptions).then( /*#__PURE__*/function () {
         var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(response) {
           var data, error;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -20919,7 +20920,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         var bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
 
         if (bottomOfWindow) {
-          axios.get("http://127.0.0.1:8000/api/posts").then(function (response) {
+          axios.get(_this2.url + "/api/posts").then(function (response) {
             _this2.users.push(response.data.results[0]);
           });
         }

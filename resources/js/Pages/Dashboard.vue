@@ -31,6 +31,7 @@ export default defineComponent({
   data() {
     return {
       users: [],
+      url: 'https://marian-alumni.herokuapp.com',
     };
   },
   beforeMount() {
@@ -50,7 +51,7 @@ export default defineComponent({
         },
         // body: JSON.stringify({ title: 'Vue POST Request Example' })
       };
-      fetch("http://127.0.0.1:8000/api/posts", requestOptions)
+      fetch( this.url + "/api/posts", requestOptions)
         .then(async (response) => {
           const data = await response.json();
           this.users = data.data;
@@ -72,7 +73,7 @@ export default defineComponent({
       window.onscroll = () => {
         let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
         if (bottomOfWindow) {
-          axios.get(`http://127.0.0.1:8000/api/posts`).then(response => {
+          axios.get( this.url +`/api/posts`).then(response => {
             this.users.push(response.data.results[0]);
           });
         }

@@ -17,17 +17,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-    <script>
-        if (localStorage.getItem('dark-mode') == 'true' || !('dark-mode' in localStorage)) {
-            document.querySelector('html').classList.add('dark');
-        } else {
-            document.querySelector('html').classList.remove('dark');
-        }        
-        </script>
-
-    <!-- Theme CSS -->
-    {{-- <link rel="stylesheet" href="assets/css/theme.bundle.css" /> --}}
-
     <!-- Scripts -->
     @routes
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -43,11 +32,6 @@
 
 
 <!-- JAVASCRIPT -->
-<!-- Vendor JS -->
-<script src="assets/js/vendor.bundle.js"></script>
-
-<!-- Theme JS -->
-<script src="assets/js/theme.bundle.js"></script>
 
 <script src="main.bff24adf2375a62a4452.js"></script>
 

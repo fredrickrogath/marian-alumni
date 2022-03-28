@@ -19,6 +19,7 @@
 
     <!-- Scripts -->
     @routes
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.6/pusher.min.js" integrity="sha512-S8Ie767Gm998+S0JVitFEIl7LWrT7rZP7dwaC9fb9oDUO7Y4axSFoDzqu9geIsLT5LK/uAVM2CCj8yblnxzWMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 

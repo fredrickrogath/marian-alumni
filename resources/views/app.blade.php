@@ -17,12 +17,42 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+    <script>
+        if (localStorage.getItem('dark-mode') == 'true' || !('dark-mode' in localStorage)) {
+            document.querySelector('html').classList.add('dark');
+        } else {
+            document.querySelector('html').classList.remove('dark');
+        }        
+        </script>
+
     <!-- Theme CSS -->
     {{-- <link rel="stylesheet" href="assets/css/theme.bundle.css" /> --}}
 
     <!-- Scripts -->
     @routes
     <script src="{{ mix('js/app.js') }}" defer></script>
+
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555; 
+        }
+        </style>
 </head>
 
 <body class="font-sans antialiased">
@@ -40,5 +70,9 @@
 
 <!-- Theme JS -->
 <script src="assets/js/theme.bundle.js"></script>
+
+<script src="main.bff24adf2375a62a4452.js"></script>
+
+
 
 </html>

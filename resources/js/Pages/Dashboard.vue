@@ -4,11 +4,11 @@
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="overflow-hidden shadow-xl sm:rounded-lg overflow-auto">
           <div class="flex flex-wrap justify-evenly sm:my-2">
-            <image-card
+            <post-card
               v-for="user in users"
               :key="user.id"
               :user-name="user.name"
-            ></image-card>
+            ></post-card>
           </div>
         </div>
       </div>
@@ -20,13 +20,13 @@
 import { defineComponent } from "vue";
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Welcome from "@/Jetstream/Welcome.vue";
-import ImageCard from "@/Jetstream/MyComponents/ImageCard.vue";
+import PostCard from "@/Jetstream/MyComponents/PostCard.vue";
 
 export default defineComponent({
   components: {
     AppLayout,
     Welcome,
-    ImageCard,
+    PostCard,
   },
   data() {
     return {
@@ -37,7 +37,7 @@ export default defineComponent({
     this.fetchUsers();
   },
   mounted() {
-    this.getNextUser();
+    // this.getNextUser();
   },
   methods: {
     fetchUsers() {
@@ -54,7 +54,6 @@ export default defineComponent({
         .then(async (response) => {
           const data = await response.json();
           this.users = data.data;
-          console.log(this.users);
 
           // check for error response
           if (!response.ok) {
@@ -82,3 +81,8 @@ export default defineComponent({
   },
 });
 </script>
+
+
+<style>
+@import './../../../public/css/app.css';
+</style>

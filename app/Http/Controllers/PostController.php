@@ -18,7 +18,7 @@ class PostController extends Controller
         // return response()->json('hello');
         $response = [
             'success' => true,
-            'data'    => User::get(),
+            'data'    => User::take(12)->get(),
             'message' => 'message',
         ];
         return response()->json($response, 200);

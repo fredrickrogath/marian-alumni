@@ -341,7 +341,7 @@ export default {
 }
 
 .post-options-enter-active {
-  transition: all 0.4s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .post-options-enter-to {
@@ -355,7 +355,7 @@ export default {
 }
 
 .post-options-leave-active {
-  transition: all 0.4s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .post-options-leave-to {

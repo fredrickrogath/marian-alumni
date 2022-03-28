@@ -2,12 +2,51 @@
   <Head title="Welcome" />
 
   <!-- Page wrapper -->
-  <div class="">
-    <header>
+  <div class="scrollbar-hide">
+    <header class="bg-gray-900">
       <div
-        class="w-full bg-cover bg-center"
-        style="height: 55rem; background-image: url(assets/logo/emblem.png)"
+        class="w-full bg-cover bg-center header"
+        style="background-image: url(assets/logo/emblem.png)"
       >
+
+      <div class="h-16 flex justify-around">
+        <div class="mt-2">
+          <transition name="head1">
+              <h1
+                v-if="showHead1"
+                class="
+                  text-gray-300 text-md
+                  mb-5
+                  px-4
+                  font-semibold
+                  uppercase
+                  md:text-2xl
+                "
+              >
+                {{ paragraph1 }}
+              </h1>
+            </transition>
+        </div>
+
+        <div class="mt-2">
+          <transition name="head1">
+              <h1
+                v-if="showHead1"
+                class="
+                  text-gray-300 text-md
+                  mb-5
+                  px-4
+                  font-semibold
+                  uppercase
+                  md:text-2xl
+                "
+              >
+                {{ paragraph2 }}
+              </h1>
+            </transition>
+        </div>
+
+      </div>
         <div
           class="
             flex
@@ -18,29 +57,29 @@
             bg-gray-900 bg-opacity-50
           "
         >
+            
           <div class="text-center">
-            <h1 class="text-white text-2xl mb-5 font-semibold uppercase md:text-3xl">
-              Marian Girls Alumni Association
-            </h1>
-            <p class="text-center display-5 text-white mb-7">
-              CONNECT, EXPAND AND GIVE BACK
-            </p>
+            
             <button
               class="
-                mt-4
+                md:mt-4
+                mt-96
                 px-4
+                md:ml-10
+                ml-4
                 py-2
                 bg-blue-600
                 text-white text-sm
                 uppercase
                 font-medium
                 rounded
+                animate-bounce
                 hover:bg-blue-500
                 focus:outline-none focus:bg-blue-500
               "
             >
               <Link v-if="canRegister" :href="route('register')" class="">
-                Register
+                Welcome
               </Link>
             </button>
           </div>
@@ -60,7 +99,7 @@
     ></iframe>
 
     <!-- Site footer -->
-    <footer class="is" style="background-color: #1c1c1a">
+    <footer class="is bg-gray-900 opacity-100">
       <div class="ax ss ht yo">
         <div class="hu we nz ld v_ oh">
           <div class="in ig" aria-hidden="true">
@@ -101,141 +140,118 @@
           <div class="ud bm fq xw sp yq">
             <div class="yv wp ud fc bv fq">
               <img src="assets/logo/emblem.png" width="200" height="200" />
-              <!-- <div class="pc">
-                <h6 class="pv py sw">Products</h6>
-                <ul>
-                  <li class="sy">
-                    <a
-                      class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
-                      href="#0"
-                      >Drag And Drop</a
-                    >
-                  </li>
-                  <li class="sy">
-                    <a
-                      class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
-                      href="#0"
-                      >Visual Studio X</a
-                    >
-                  </li>
-                  <li class="sy">
-                    <a
-                      class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
-                      href="#0"
-                      >Easy Content</a
-                    >
-                  </li>
-                </ul>
-              </div> -->
+
               <div class="pc">
-                <h6 class="pv py sw text-gray-300">Resources</h6>
+                <h6 class="pv py sw text-gray-300">Marian</h6>
                 <ul>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Industries and tools</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Use cases</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Blog</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Online events</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Nostrud exercitation</a
+                      >Marian Alumni</a
                     >
                   </li>
                 </ul>
               </div>
               <div class="pc">
-                <h6 class="pv py sw text-gray-300">Company</h6>
+                <h6 class="pv py sw text-gray-300">Marian</h6>
                 <ul>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Diversity &amp; inclusion</a
+                      >
+                      <!-- &amp; -->
+                      Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >About us</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Press</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Customer stories</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Online communities</a
+                      >Marian Alumni</a
                     >
                   </li>
                 </ul>
               </div>
               <div class="pc">
-                <h6 class="pv py sw text-gray-300">Support</h6>
+                <h6 class="pv py sw text-gray-300">Marian</h6>
                 <ul>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Documentation</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Tutorials &amp; guides</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Webinars</a
+                      >Marian Alumni</a
                     >
                   </li>
                   <li class="sy">
                     <a
                       class="text-gray-600 dark--text-gray-400 vd d_ dz vr"
                       href="#0"
-                      >Open-source</a
+                      >Marian Alumni</a
                     >
                   </li>
                 </ul>
@@ -414,7 +430,7 @@
               >
             </div>
             <div class="text-gray-600 dark--text-gray-400 pc ov">
-              © 2020 Appy. All rights reserved.
+              © 2022 Appy. All rights reserved.
             </div>
           </div>
         </div>
@@ -422,72 +438,6 @@
     </footer>
   </div>
 </template>
-
-<style>
-@import "./../../../public/assets/css/style.b973ef58d3fd736d16d2.css";
-
-/* .bg-gray-100 {
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--tw-bg-opacity));
-}
-
-.border-gray-200 {
-  border-color: #edf2f7;
-  border-color: rgba(237, 242, 247, var(--tw-border-opacity));
-}
-
-.text-gray-400 {
-  color: #cbd5e0;
-  color: rgba(203, 213, 224, var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  color: #a0aec0;
-  color: rgba(160, 174, 192, var(--tw-text-opacity));
-}
-
-.text-gray-600 {
-  color: #718096;
-  color: rgba(113, 128, 150, var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--tw-text-opacity));
-}
-
-.text-gray-900 {
-  color: #1a202c;
-  color: rgba(26, 32, 44, var(--tw-text-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-gray-800 {
-    background-color: #2d3748;
-    background-color: rgba(45, 55, 72, var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-gray-900 {
-    background-color: #1a202c;
-    background-color: rgba(26, 32, 44, var(--tw-bg-opacity));
-  }
-
-  .dark\:border-gray-700 {
-    border-color: #4a5568;
-    border-color: rgba(74, 85, 104, var(--tw-border-opacity));
-  }
-
-  .dark\:text-white {
-    color: #fff;
-    color: rgba(255, 255, 255, var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-400 {
-    color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--tw-text-opacity));
-  }
-} */
-</style>
 
 <script>
 import { defineComponent } from "vue";
@@ -505,30 +455,70 @@ export default defineComponent({
     laravelVersion: String,
     phpVersion: String,
   },
+
+  data() {
+    return {
+      showHead1: false,
+      paragraph1: 'Marian Girls Alumni Association',
+      paragraph2: 'CONNECT, EXPAND AND GIVE BACK'
+    };
+  },
+
+  mounted() {
+    this.$nextTick(function () {
+            window.setInterval(() => {
+                this.animateHead1();
+            },3000);
+        })
+},
+
+  methods: {
+    animateHead1() {
+      this.showHead1 = !this.showHead1;
+    },
+    animateHead2() {},
+  },
 });
 </script>
 
+<style>
+@import "./../../../public/assets/css/style.b973ef58d3fd736d16d2.css";
 
-<style scoped>
-/* width */
-::-webkit-scrollbar {
-  width: 2px;
+.head1-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: red; 
-  border-radius: 10px;
+.head1-enter-active {
+  transition: all 0.7s ease-out;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+.head1-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.head1-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.head1-leave-active {
+  transition: all 0.7s ease-in;
+}
+
+.head1-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.header {
+  height: 55rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 35rem;
+  }
 }
 </style>
